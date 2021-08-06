@@ -9,13 +9,13 @@ function Banner() {
     return (
         <div className="banner border">
             <div className="banner_search">
-                {showSearch ? <Search /> : null}
                 <Button
                     onClick={() => setshowSearch(!showSearch)}
                     className="banner_search_button"
                     variant="outlined">
-                    {showSearch ? "Seach Dates" : "Hide"}
+                    {showSearch ? "Hide" : "Seach Dates"}
                 </Button>
+                {showSearch ? <Search /> : null}
             </div>
             <div className="banner_info">
                 <h1>Get out and stretch your imagination</h1>
