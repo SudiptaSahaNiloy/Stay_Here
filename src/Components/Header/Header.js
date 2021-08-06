@@ -17,7 +17,7 @@ function Header() {
                 <SearchIcon />
             </div>
 
-            <div className="header_right border">
+            <div className="header_right">
                 <p>Become a host</p>
                 <LanguageIcon />
                 <ExpandMoreIcon />

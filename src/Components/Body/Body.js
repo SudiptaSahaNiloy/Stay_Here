@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Home from './Home/Home';
 
 function Body() {
     return (
         <div>
-            {/* Body Component */}
+            <Home />
         </div>
     )
 }
