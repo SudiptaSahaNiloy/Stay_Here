@@ -28,7 +28,7 @@ function Seach() {
                 ranges={[selectionRange]}
                 onChange={handleSelect}
             />
-            <h2 className="border">Number of guests <PeopleIcon /></h2>
+            <h2>Number of guests <PeopleIcon /></h2>
             <input min={0} defaultValue={2} type="number" />
             <Button>Search hotels</Button>
         </div>
