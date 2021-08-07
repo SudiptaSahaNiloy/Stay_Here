@@ -7,7 +7,7 @@ function Banner() {
     const [showSearch, setshowSearch] = useState(false);
 
     return (
-        <div className="banner border">
+        <div className="banner">
             <div className="banner_search">
                 <Button
                     onClick={() => setshowSearch(!showSearch)}
