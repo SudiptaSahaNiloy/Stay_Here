@@ -15,6 +15,7 @@
     height: 70px;
     margin-left: 20px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .header_center {
