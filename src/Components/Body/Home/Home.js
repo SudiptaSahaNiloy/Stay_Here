@@ -1,6 +1,6 @@
 // type 'rfce' and see the magic
 import React from 'react';
-import './Home.css';
+import './Stylesheet/Home.css';
 import Banner from './Banner';
 import Card from './Card';
 

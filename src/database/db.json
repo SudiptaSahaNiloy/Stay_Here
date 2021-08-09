@@ -1,0 +1,40 @@
+{
+    "rooms": [
+        {
+            "id": "1",
+            "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
+            "location": "location 1",
+            "title": "title 1",
+            "description": "description 1",
+            "star": "4.73",
+            "price": "30"
+        },
+        {
+            "id": "2",
+            "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
+            "location": "location 2",
+            "title": "title 2",
+            "description": "description 2",
+            "star": "4.73",
+            "price": "30"
+        },
+        {
+            "id": "3",
+            "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
+            "location": "location 3",
+            "title": "title 3",
+            "description": "description 3",
+            "star": "4.73",
+            "price": "30"
+        },
+        {
+            "id": "4",
+            "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
+            "location": "location 4",
+            "title": "title 4",
+            "description": "description 4",
+            "star": "4.73",
+            "price": "30"
+        }
+    ]
+}

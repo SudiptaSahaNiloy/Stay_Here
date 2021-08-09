@@ -23,6 +23,7 @@
     align-items: center;
     max-width: fit-content;
     padding: 30px;
+    margin-left: 50px;
     height: 30px;
     flex: 1;
     border: 1px solid lightgray;
@@ -39,7 +40,12 @@
 .header_right {
     display: flex;
     align-items: center;
-    width: 15vw;
+    width: 12vw;
     margin-right: 20px;
     justify-content: space-between;
+}
+
+.header_right>p{
+    margin-top: 15px;
+    font-weight: 500;
 }

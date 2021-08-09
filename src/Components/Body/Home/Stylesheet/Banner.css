@@ -42,7 +42,7 @@
     background-color: white !important;
     color: #FF5A5F !important;
     text-transform: inherit !important;
-    font-weight: 900 !important;
+    font-weight: 500 !important;
 }
 
 @media only screen and (max-width: 600px) {

@@ -5,6 +5,7 @@ import { Avatar } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import LanguageIcon from '@material-ui/icons/Language';
 import { Link } from 'react-router-dom';
+// import AuthPopup from './AuthPopup';
 
 function Header() {
     return (
@@ -22,9 +23,13 @@ function Header() {
 
             <div className="header_right">
                 <p>Become a host</p>
-                <LanguageIcon />
-                <ExpandMoreIcon />
-                <Avatar />
+                <div>
+                    <LanguageIcon />
+                    <ExpandMoreIcon />
+                </div>
+                <Link to="/login">
+                    <Avatar />
+                </Link>
             </div>
         </div>
     )
