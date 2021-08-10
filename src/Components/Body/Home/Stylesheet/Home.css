@@ -1,4 +1,9 @@
-.home_section{
+.service_section {
+    display: flex;
+    padding: 30px;
+}
+
+.hotel_section {
     display: flex;
     padding: 30px;
 }

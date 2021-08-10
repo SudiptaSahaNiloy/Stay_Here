@@ -1,7 +1,7 @@
 import React from 'react';
 import './Stylesheet/Card.css';
 
-function Card(props) {
+function HotelCard(props) {
     return (
         <div className="card">
             <img src={props.src} alt="" />
@@ -14,4 +14,4 @@ function Card(props) {
     )
 }
 
-export default Card
+export default HotelCard;

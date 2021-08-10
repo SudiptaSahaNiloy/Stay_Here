@@ -2,8 +2,32 @@ import React from 'react';
 import './SearchPage.css';
 import { Button } from '@material-ui/core';
 import SearchResult from './SearchResult';
+import { connect } from 'react-redux';
 
-function SearchPage() {
+const mapStateToProps = (State) => {
+    return {
+        hotels: State.hotels,
+    }
+}
+
+function SearchPage(props) {
+
+    let hotel = null;
+    hotel = props.hotels.map((item) => {
+        return (
+            <SearchResult
+                key={item.id}
+                img={item.img}
+                location={item.location}
+                title={item.title}
+                description={item.description}
+                star={item.star}
+                price={item.price}
+                total="$117 total"
+            />
+        )
+    })
+
     return (
         <div className="searchPage">
             <div className="searchPage_info">
@@ -24,7 +48,8 @@ function SearchPage() {
                 <Button variant="outlined">
                     More filters
                 </Button>
-                <SearchResult
+                {hotel}
+                {/* <SearchResult
                     img="assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg"
                     location="Private room in center of london"
                     title="Stay at this spacious Edwardian House"
@@ -41,10 +66,10 @@ function SearchPage() {
                     star="4.73"
                     price="$30/night"
                     total="$117 total"
-                />
+                /> */}
             </div>
         </div>
     )
 }
 
-export default SearchPage;
+export default connect(mapStateToProps)(SearchPage);

@@ -21,7 +21,7 @@ function SearchResult(props) {
                         <p><strong>{props.star}</strong></p>
                     </div>
                     <div className="searchResult_price">
-                        <h2>{props.price}</h2>
+                        <h2>${props.price}/night</h2>
                         <p>{props.total}</p>
                     </div>
                 </div>

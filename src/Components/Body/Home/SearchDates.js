@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
-import './Stylesheet/Search.css';
+import './Stylesheet/SearchDates.css';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
 import PeopleIcon from '@material-ui/icons/People';
 import { Button } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { loadStayRange } from '../../../Redux/actionCreators';
 
-function Seach() {
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadStayRange: (startDate, endDate) => dispatch(loadStayRange(startDate, endDate)),
+    }
+}
+
+function SearchDates(props) {
     const history = useHistory();
     const [startDate, setstartDate] = useState(new Date());
     const [endDate, setendDate] = useState(new Date());
@@ -22,6 +30,7 @@ function Seach() {
         // console.log(ranges.selection);
         setstartDate(ranges.selection.startDate);
         setendDate(ranges.selection.endDate);
+        props.loadStayRange(ranges.selection.startDate, ranges.selection.endDate);
     }
 
     return (
@@ -37,4 +46,4 @@ function Seach() {
     )
 }
 
-export default Seach
+export default connect(null, mapDispatchToProps)(SearchDates);

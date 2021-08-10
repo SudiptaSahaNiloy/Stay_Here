@@ -2,7 +2,7 @@ import { Button } from '@material-ui/core';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Stylesheet/Banner.css';
-import Search from './Seach.js';
+import SearchDates from './SearchDates.js';
 
 function Banner() {
     const history = useHistory();
@@ -14,10 +14,10 @@ function Banner() {
                 <Button
                     onClick={() => setshowSearch(!showSearch)}
                     className="banner_search_button"
-                    >
+                >
                     {showSearch ? "Hide" : "Seach Dates"}
                 </Button>
-                {showSearch ? <Search /> : null}
+                {showSearch ? <SearchDates /> : null}
             </div>
             <div className="banner_info">
                 <h1>Get out and stretch your imagination</h1>
