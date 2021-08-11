@@ -3,7 +3,7 @@ import React from 'react';
 import './Stylesheet/Home.css';
 import Banner from './Banner';
 import HotelCard from './HotelCard';
-import { fetchHotels } from '../../../Redux/actionCreators';
+import { fetchGuests, fetchHotels } from '../../../Redux/actionCreators';
 import { connect } from 'react-redux';
 import { Component } from 'react';
 
@@ -16,17 +16,17 @@ const mapStateToProps = (State) => {
 const mapDispatchToProps = (dispatch) => {
     return ({
         fetchHotels: () => dispatch(fetchHotels()),
+        fetchGuests: () => dispatch(fetchGuests()),
     })
 }
 
 class Home extends Component {
     componentDidMount() {
         this.props.fetchHotels();
+        this.props.fetchGuests();
     }
 
     render() {
-        // console.log(this.props.hotels);
-
         let hotel = null;
         hotel = this.props.hotels.map((item) => {
             return (

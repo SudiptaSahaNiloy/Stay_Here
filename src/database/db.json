@@ -1,66 +1,68 @@
 {
-    "rooms": [
-        {
-            "id": "1",
-            "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
-            "location": "location 1",
-            "title": "title 1",
-            "description": "description 1",
-            "star": "4.73",
-            "price": "30"
-        },
-        {
-            "id": "2",
-            "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
-            "location": "location 2",
-            "title": "title 2",
-            "description": "description 2",
-            "star": "4.73",
-            "price": "30"
-        },
-        {
-            "id": "3",
-            "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
-            "location": "location 3",
-            "title": "title 3",
-            "description": "description 3",
-            "star": "4.73",
-            "price": "30"
-        },
-        {
-            "id": "4",
-            "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
-            "location": "location 4",
-            "title": "title 4",
-            "description": "description 4",
-            "star": "4.73",
-            "price": "30"
-        }
-    ],
-    "guests": [
-        {
-            "guestId": "1",
-            "roomId": "3",
-            "guestName": "guestName1",
-            "location": "location 1"
-        },
-        {
-            "guestId": "2",
-            "roomId": "2",
-            "guestName": "guestName2",
-            "location": "location 2"
-        },
-        {
-            "guestId": "3",
-            "roomId": "1",
-            "guestName": "guestName3",
-            "location": "location 3"
-        },
-        {
-            "guestId": "4",
-            "roomId": "4",
-            "guestName": "guestName4",
-            "location": "location 4"
-        }
-    ]
+  "rooms": [
+    {
+      "id": "1",
+      "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
+      "location": "location 1",
+      "title": "title 1",
+      "description": "description 1",
+      "star": "4.73",
+      "price": "30",
+      "bookStartDate": "Tue Aug 10 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)",
+      "bookEndDate": "Fri Aug 13 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)"
+    },
+    {
+      "id": "2",
+      "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
+      "location": "location 2",
+      "title": "title 2",
+      "description": "description 2",
+      "star": "4.73",
+      "price": "30",
+      "bookStartDate": "Sun Aug 15 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)",
+      "bookEndDate": "Fri Aug 20 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)"
+    },
+    {
+      "id": "3",
+      "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
+      "location": "location 3",
+      "title": "title 3",
+      "description": "description 3",
+      "star": "4.73",
+      "price": "30",
+      "bookStartDate": "Wed Aug 25 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)",
+      "bookEndDate": "Thu Aug 26 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)"
+    },
+    {
+      "id": "4",
+      "img": "assets/images/alex-bertha-Jyg7xHRmXiU-unsplash.jpg",
+      "location": "location 4",
+      "title": "title 4",
+      "description": "description 4",
+      "star": "4.73",
+      "price": "30",
+      "bookStartDate": "Sat Aug 28 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)",
+      "bookEndDate": "Sun Aug 29 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)"
+    }
+  ],
+  "guests": [
+    {
+      "guestId": "4",
+      "roomId": "1",
+      "guestName": "guestName4",
+      "location": "location4",
+      "bookStartDate": "2021-08-18T18:00:00.000Z",
+      "bookEndDate": "2021-08-20T18:00:00.000Z",
+      "id": 1
+    },
+    {
+      "guestId": "4",
+      "roomId": "3",
+      "guestName": "guestName4",
+      "location": "location4",
+      "bookStartDate": "2021-08-18T18:00:00.000Z",
+      "bookEndDate": "2021-08-20T18:00:00.000Z",
+      "id": 2
+    }
+  ]
 }
