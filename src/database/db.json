@@ -47,22 +47,14 @@
   ],
   "guests": [
     {
-      "guestId": "4",
-      "roomId": "1",
-      "guestName": "guestName4",
-      "location": "location4",
-      "bookStartDate": "2021-08-18T18:00:00.000Z",
-      "bookEndDate": "2021-08-20T18:00:00.000Z",
+      "firstName": "Sudipta Saha",
+      "lastName": "Niloy",
+      "phoneNumber": "01749450739",
+      "email": "niloy305968@gmail.com",
       "id": 1
-    },
-    {
-      "guestId": "4",
-      "roomId": "3",
-      "guestName": "guestName4",
-      "location": "location4",
-      "bookStartDate": "2021-08-18T18:00:00.000Z",
-      "bookEndDate": "2021-08-20T18:00:00.000Z",
-      "id": 2
     }
+  ],
+  "bookingInfo": [
+    
   ]
 }

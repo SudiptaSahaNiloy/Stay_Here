@@ -24,7 +24,7 @@ function Header() {
             <div className="header_right">
                 <p>Become a host</p>
                 <div>
-                    <LanguageIcon />
+                    <LanguageIcon  />
                     <ExpandMoreIcon />
                 </div>
                 <Link to="/login">

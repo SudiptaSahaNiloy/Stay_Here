@@ -5,6 +5,7 @@ const INITIAL_STATE = {
     guests: [],
     startDate: null,
     endDate: null,
+    guestId: null,
 }
 
 export const reducer = (state = INITIAL_STATE, action) => {
@@ -17,17 +18,36 @@ export const reducer = (state = INITIAL_STATE, action) => {
         case actionTypes.LOAD_GUESTS:
             return {
                 ...state,
-               guests: action.payload,
+                guests: action.payload,
             }
         case actionTypes.LOAD_STAY_RANGE:
-            return{
+            return {
                 ...state,
                 startDate: action.payload.startDate,
                 endDate: action.payload.endDate,
             }
         case actionTypes.GUEST_INFO:
-            return{
+            return {
                 ...state,
+                guestId: action.payload.id,
+            }
+        case actionTypes.AUTH_SUCCESS:
+            return {
+                ...state,
+                // idToken: action.payload.idToken,
+                // localId: action.payload.localId,
+            }
+        case actionTypes.AUTH_FAILED:
+            return {
+                ...state,
+                // errorMsg: action.payload,
+            }
+        case actionTypes.AUTH_LOGOUT:
+            return {
+                ...state,
+                // idToken: null,
+                // localId: null,
+                // displayName: null,
             }
         default:
             return state;

@@ -5,7 +5,6 @@ import SearchResult from './SearchResult';
 import { connect } from 'react-redux';
 import { Component } from 'react';
 import { guestInfoUpdate } from '../../../Redux/actionCreators';
-import dateFormat from 'dateformat';
 
 const mapStateToProps = (State) => {
     return {
