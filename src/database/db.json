@@ -7,9 +7,8 @@
       "title": "title 1",
       "description": "description 1",
       "star": "4.73",
-      "price": "30",
-      "bookStartDate": "Tue Aug 10 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)",
-      "bookEndDate": "Fri Aug 13 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)"
+      "booked": "true",
+      "price": "30"
     },
     {
       "id": "2",
@@ -18,9 +17,8 @@
       "title": "title 2",
       "description": "description 2",
       "star": "4.73",
-      "price": "30",
-      "bookStartDate": "Sun Aug 15 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)",
-      "bookEndDate": "Fri Aug 20 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)"
+      "booked": "false",
+      "price": "30"
     },
     {
       "id": "3",
@@ -29,9 +27,8 @@
       "title": "title 3",
       "description": "description 3",
       "star": "4.73",
-      "price": "30",
-      "bookStartDate": "Wed Aug 25 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)",
-      "bookEndDate": "Thu Aug 26 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)"
+      "booked": "false",
+      "price": "30"
     },
     {
       "id": "4",
@@ -40,9 +37,8 @@
       "title": "title 4",
       "description": "description 4",
       "star": "4.73",
-      "price": "30",
-      "bookStartDate": "Sat Aug 28 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)",
-      "bookEndDate": "Sun Aug 29 2021 00:00:00 GMT+0600 (Bangladesh Standard Time)"
+      "booked": "false",
+      "price": "30"
     }
   ],
   "guests": [
@@ -52,9 +48,36 @@
       "phoneNumber": "01749450739",
       "email": "niloy305968@gmail.com",
       "id": 1
+    },
+    {
+      "firstName": "Laxmi Rani ",
+      "lastName": "Saha",
+      "phoneNumber": "01749450739",
+      "email": "laxmiranisaha01715051617@gmail.com",
+      "id": 2
+    },
+    {
+      "firstName": "Nani Gopal",
+      "lastName": "Saha",
+      "phoneNumber": "01749450739",
+      "email": "ngs.nani1772@gmail.com",
+      "id": 3
+    },
+    {
+      "firstName": "Sudipta Saha",
+      "lastName": "Niloy",
+      "phoneNumber": "01749450739",
+      "email": "niloy305968@gmail.com",
+      "id": 4
     }
   ],
-  "bookingInfo": [
-    
+  "bookingList": [
+    {
+      "guestId": "4",
+      "roomId": "1",
+      "bookingStartDate": "2021-08-22T18:00:00.000Z",
+      "bookingEndDate": "2021-08-26T18:00:00.000Z",
+      "id": 1
+    }
   ]
 }

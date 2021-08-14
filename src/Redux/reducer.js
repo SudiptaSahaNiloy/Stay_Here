@@ -3,6 +3,7 @@ import * as actionTypes from './actionTypes';
 const INITIAL_STATE = {
     hotels: [],
     guests: [],
+    bookingList: [],
     startDate: null,
     endDate: null,
     guestId: null,
@@ -29,7 +30,17 @@ export const reducer = (state = INITIAL_STATE, action) => {
         case actionTypes.GUEST_INFO:
             return {
                 ...state,
-                guestId: action.payload.id,
+                guestId: action.payload,
+            }
+        case actionTypes.BOOKING_INFO:
+            return {
+                ...state,
+                guestId: action.payload,
+            }
+        case actionTypes.BOOKING_LIST:
+            return {
+                ...state,
+                bookingList: action.payload,
             }
         case actionTypes.AUTH_SUCCESS:
             return {

@@ -10,4 +10,7 @@ export const AUTH_FAILED = 'AUTH_FAILED';
 export const AUTH_LOADING = 'AUTH_LOADING';
 export const AUTH_LOGOUT = 'AUTH_LOGOUT';
 
+export const BOOKING_INFO = "BOOKING_INFO";
+export const BOOKING_LIST = "BOOKING_LIST";
+
 

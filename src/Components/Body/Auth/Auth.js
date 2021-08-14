@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import { Component } from "react";
 import { connect } from "react-redux";
-import { Button, Form, FormGroup, Input, Col, Row, Alert } from 'reactstrap';
+import { Button, Form, FormGroup, Input, Col, Row} from 'reactstrap';
 import { guest } from "../../../Redux/authActionCreator";
 import './Auth.css';
 
@@ -162,7 +162,7 @@ class Auth extends Component {
             )
         }
 
-        const alertMsg = <Alert color="danger">{this.props.errorMsg}</Alert>;
+        // const alertMsg = <Alert color="danger">{this.props.errorMsg}</Alert>;
 
         return (
             <div className="container">

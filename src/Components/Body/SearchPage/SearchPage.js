@@ -4,45 +4,62 @@ import { Button } from '@material-ui/core';
 import SearchResult from './SearchResult';
 import { connect } from 'react-redux';
 import { Component } from 'react';
-import { guestInfoUpdate } from '../../../Redux/actionCreators';
+import { booking, fetchBookingList, updateHotels } from '../../../Redux/actionCreators';
 
 const mapStateToProps = (State) => {
     return {
         hotels: State.hotels,
-        guests: State.guests,
+        guestId: State.guestId,
         startDate: State.startDate,
         endDate: State.endDate,
+        bookingList: State.bookingList,
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        guestInfoUpdate: (roomId, bookStartDate, bookEndDate) => dispatch(guestInfoUpdate(roomId, bookStartDate, bookEndDate)),
+        booking: (guestId, roomId, bookingStartDate, bookingEndDate) => dispatch(booking(guestId, roomId, bookingStartDate, bookingEndDate)),
+        fetchBookingList: () => dispatch(fetchBookingList()),
+        updateHotels: (hotelRoom) => dispatch(updateHotels(hotelRoom))
     }
 }
 
 class SearchPage extends Component {
-    state = {
-        selectedHotel: null,
+    componentDidMount() {
+        this.props.fetchBookingList();
     }
 
-    onHotelSelect = (hotel) => {
-        // console.log(hotel);
-        this.props.guestInfoUpdate(hotel.id, this.props.startDate, this.props.endDate);
+    state = {
+        selectedRoom: null,
+    }
+
+    onHotelSelect = (room) => {
+        this.props.booking(this.props.guestId, room.id, this.props.startDate, this.props.endDate);
+        let hotelRoom = null;
+
+        hotelRoom = this.props.hotels.filter((item) => {
+            return item.id === room.id;
+        })
+
+        this.props.updateHotels(hotelRoom);
         this.setState({
-            selectedHotel: hotel,
+            selectedRoom: room,
         })
     }
 
     render() {
+        // this.props.bookingList.map((item) => {
+        //     if (item.bookingEndDate < new Date()) {
+        //         this.props.updateHotels(item.roomId)
+        //     }
+        // })
+
         let hotel = null;
         let unBookedRooms = null;
+
         unBookedRooms = this.props.hotels.filter((item) => {
-            let endDate = new Date(item.bookEndDate);
-            let startDate = new Date(this.props.startDate);
-            return startDate > endDate;
+            return item.booked === 'false';
         })
-        // console.log(unBookedRooms);
         hotel = unBookedRooms.map((item) => {
             return (
                 <SearchResult
