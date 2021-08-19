@@ -19,14 +19,17 @@ function Banner() {
                 </Button>
                 {showSearch ? <SearchDates /> : null}
             </div>
-            <div className="banner_info">
-                <h1>Get out and stretch your imagination</h1>
-                <h5>
-                    Plan a different kind of gateway to uncover the hidden
-                    gems near you
-                </h5>
-                <Button onClick={() => history.push('/search')} variant="outlined">Explore Nearby</Button>
+            <div>
+                <div className="banner_info">
+                    <h1>Get out and stretch your imagination</h1>
+                    <h5>
+                        Plan a different kind of gateway to uncover the hidden
+                        gems near you
+                    </h5>
+                    <Button onClick={() => history.push('/search')} variant="outlined">Explore Nearby</Button>
+                </div>
             </div>
+            
         </div>
     )
 }

@@ -6,7 +6,6 @@
 }
 
 .banner_info {
-    background-color: black;
     color: white;
     padding-top: 25vh;
     padding-left: 50px;
@@ -33,7 +32,7 @@
     font-weight: 600;
 }
 
-.banner_search{
+.banner_search {
     display: flex;
     flex-direction: column;
 }

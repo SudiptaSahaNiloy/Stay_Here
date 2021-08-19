@@ -4,6 +4,8 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import StarIcon from '@material-ui/icons/Star';
 import { Component } from 'react';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { Link } from 'react-router-dom';
+import Room from '../Room/Room';
 
 class SearchResult extends Component {
     state = {
@@ -11,10 +13,13 @@ class SearchResult extends Component {
     }
 
     handleOnClick = (e) => {
-        this.props.onHotelSelect(e);
+        // this.props.onHotelSelect(e);
         this.setState({
             favorite: !this.state.favorite,
         })
+        return (
+            <Room selectedRoom={e} />
+        )
     }
 
     render() {
@@ -23,11 +28,17 @@ class SearchResult extends Component {
                 <img src={this.props.hotelRoom.img} alt="" />
                 {this.state.favorite ?
                     <FavoriteIcon
-                        onClick={() => this.handleOnClick(this.props.hotelRoom)}
+                        onClick={() => {
+                            this.handleOnClick(this.props.hotelRoom);
+                        }}
                         style={{ color: "#FF5A5F" }}
-                        className="searchResult_heart" /> :
+                        className="searchResult_heart" />
+                    :
                     <FavoriteBorderIcon
-                        onClick={() => this.handleOnClick(this.props.hotelRoom)} className="searchResult_heart" />
+                        onClick={() => {
+                            this.handleOnClick(this.props.hotelRoom)
+                        }}
+                        className="searchResult_heart" />
                 }
                 <div className="searchResult_info">
                     <div className="searchResult_infoTop">
