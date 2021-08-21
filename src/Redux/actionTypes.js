@@ -1,4 +1,5 @@
 export const LOAD_HOTELS = 'LOAD_HOTELS';
+export const SELECTED_ROOM = 'SELECTED_ROOM';
 export const LOAD_GUESTS = 'LOAD_GUESTS';
 
 export const LOAD_STAY_RANGE = 'LOAD_STAY_RANGE';

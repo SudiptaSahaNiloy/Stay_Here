@@ -19,7 +19,7 @@ class Header extends Component {
     }
 
     render() {
-        console.log(this.state.search);
+        // console.log(this.state.search);
 
         return (
             <div className="header">

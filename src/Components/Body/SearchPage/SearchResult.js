@@ -5,7 +5,15 @@ import StarIcon from '@material-ui/icons/Star';
 import { Component } from 'react';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Link } from 'react-router-dom';
-import Room from '../Room/Room';
+import { selectedRoom } from '../../../Redux/actionCreators';
+import { connect } from 'react-redux';
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        selectedRoom: (room) => dispatch(selectedRoom(room)),
+    }
+}
+
 
 class SearchResult extends Component {
     state = {
@@ -13,31 +21,30 @@ class SearchResult extends Component {
     }
 
     handleOnClick = (e) => {
-        // this.props.onHotelSelect(e);
+        // console.log(e);
         this.setState({
             favorite: !this.state.favorite,
         })
-        return (
-            <Room selectedRoom={e} />
-        )
+        this.props.selectedRoom(e);
     }
 
     render() {
         return (
             <div className="searchResult">
-                <img src={this.props.hotelRoom.img} alt="" />
+                <Link className="imageSection" to="/room">
+                    <img
+                        onClick={() => this.handleOnClick(this.props.hotelRoom)}
+                        src={this.props.hotelRoom.img}
+                        alt="" />
+                </Link>
                 {this.state.favorite ?
                     <FavoriteIcon
-                        onClick={() => {
-                            this.handleOnClick(this.props.hotelRoom);
-                        }}
+                        onClick={() => this.handleOnClick()}
                         style={{ color: "#FF5A5F" }}
                         className="searchResult_heart" />
                     :
                     <FavoriteBorderIcon
-                        onClick={() => {
-                            this.handleOnClick(this.props.hotelRoom)
-                        }}
+                        onClick={() => this.handleOnClick()}
                         className="searchResult_heart" />
                 }
                 <div className="searchResult_info">
@@ -63,4 +70,4 @@ class SearchResult extends Component {
     }
 }
 
-export default SearchResult
+export default connect(null, mapDispatchToProps)(SearchResult);

@@ -7,6 +7,7 @@ const INITIAL_STATE = {
     startDate: null,
     endDate: null,
     guestId: null,
+    selectedRoom: null,
 }
 
 export const reducer = (state = INITIAL_STATE, action) => {
@@ -36,6 +37,11 @@ export const reducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 guestId: action.payload,
+            }
+        case actionTypes.SELECTED_ROOM:
+            return {
+                ...state,
+                selectedRoom: action.payload,
             }
         case actionTypes.BOOKING_LIST:
             return {

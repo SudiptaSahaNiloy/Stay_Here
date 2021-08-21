@@ -4,23 +4,18 @@ import { Button } from '@material-ui/core';
 import SearchResult from './SearchResult';
 import { connect } from 'react-redux';
 import { Component } from 'react';
-import { booking, fetchBookingList, updateHotels } from '../../../Redux/actionCreators';
+import {fetchBookingList} from '../../../Redux/actionCreators';
 
 const mapStateToProps = (State) => {
     return {
         hotels: State.hotels,
-        guestId: State.guestId,
-        startDate: State.startDate,
-        endDate: State.endDate,
         bookingList: State.bookingList,
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        booking: (guestId, roomId, bookingStartDate, bookingEndDate) => dispatch(booking(guestId, roomId, bookingStartDate, bookingEndDate)),
         fetchBookingList: () => dispatch(fetchBookingList()),
-        updateHotels: (hotelRoom) => dispatch(updateHotels(hotelRoom))
     }
 }
 
@@ -29,31 +24,7 @@ class SearchPage extends Component {
         this.props.fetchBookingList();
     }
 
-    state = {
-        selectedRoom: null,
-    }
-
-    onHotelSelect = (room) => {
-        this.props.booking(this.props.guestId, room.id, this.props.startDate, this.props.endDate);
-        let hotelRoom = null;
-
-        hotelRoom = this.props.hotels.filter((item) => {
-            return item.id === room.id;
-        })
-
-        this.props.updateHotels(hotelRoom);
-        this.setState({
-            selectedRoom: room,
-        })
-    }
-
     render() {
-        // this.props.bookingList.map((item) => {
-        //     if (item.bookingEndDate < new Date()) {
-        //         this.props.updateHotels(item.roomId)
-        //     }
-        // })
-
         let hotel = null;
         let unBookedRooms = null;
 
@@ -66,7 +37,6 @@ class SearchPage extends Component {
                     key={item.id}
                     hotelRoom={item}
                     total="$117 total"
-                    onHotelSelect={this.onHotelSelect}
                 />
             )
         })

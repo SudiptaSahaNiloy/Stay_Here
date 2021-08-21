@@ -68,3 +68,11 @@ export const loadStayRange = (startDate, endDate) => {
         }
     }
 }
+
+export const selectedRoom = (room) => {
+    // console.log(room);
+    return {
+        type: actionTypes.SELECTED_ROOM,
+        payload: room,
+    }
+}

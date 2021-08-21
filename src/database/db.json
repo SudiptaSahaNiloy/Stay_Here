@@ -7,7 +7,7 @@
       "title": "title 1",
       "description": "description 1",
       "star": "4.73",
-      "booked": "true",
+      "booked": "false",
       "price": "30"
     },
     {
@@ -74,9 +74,9 @@
   "bookingList": [
     {
       "guestId": "4",
-      "roomId": "1",
-      "bookingStartDate": "2021-08-22T18:00:00.000Z",
-      "bookingEndDate": "2021-08-26T18:00:00.000Z",
+      "roomId": "3",
+      "bookingStartDate": null,
+      "bookingEndDate": null,
       "id": 1
     }
   ]

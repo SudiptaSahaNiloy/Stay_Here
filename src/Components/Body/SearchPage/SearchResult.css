@@ -7,11 +7,11 @@
     cursor: pointer;
 }
 
-/* .searchResult:hover {
-    opacity: 0.8;
-} */
+.imageSection>img:hover {
+    box-shadow: 5px 5px 4px black;
+}
 
-.searchResult>img {
+.imageSection>img {
     width: 500px;
     border-radius: 10px;
     overflow: hidden;
@@ -59,12 +59,12 @@
     padding-top: 60px;
 }
 
-.searchResult_price{
+.searchResult_price {
     position: absolute;
     bottom: 20px;
     right: 30px;
 }
 
-.searchResult_price > p {
+.searchResult_price>p {
     text-align: right;
 }
